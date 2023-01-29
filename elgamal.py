@@ -8,14 +8,15 @@ from params import g
 def keygen():
     q = (p-1)/2 
     a = random.randrange(1,q) 
-    print(a)
+    #print(a)
     sk = a
     pk = pow(g,a,p) 
     return pk,sk
 
 def encrypt(pk,m):
-    c1 = 0
-    c2 = 0
+    r = = random.randrange(1,q) 
+    c1 = pow(g,r,p) 
+    c2 = pow(h,r,p) * m % p
     return [c1,c2]
 
 def decrypt(sk,c):
