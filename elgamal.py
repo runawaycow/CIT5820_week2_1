@@ -14,7 +14,7 @@ def keygen():
     return pk,sk
 
 def encrypt(pk,m):
-    r = random.randrange(1,q) 
+    r = random.randrange(1,p) 
     c1 = pow(g,r,p) 
     c2 = pow(h,r,p) * m % p
     return [c1,c2]
