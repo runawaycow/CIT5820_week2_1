@@ -4,8 +4,10 @@ from params import p
 from params import g
 
 def keygen():
-    sk = 0
-    pk = 0
+    q = (p-1)/2 
+    a = random(1,q) 
+    sk = a
+    pk = pow(g,a) % p
     return pk,sk
 
 def encrypt(pk,m):
