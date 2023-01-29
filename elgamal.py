@@ -20,6 +20,6 @@ def encrypt(pk,m):
     return [c1,c2]
 
 def decrypt(sk,c):
-    m = (c[1]/pow(c[2],a)) % sk
+    m = (c[0]/pow(c[1],a)) % sk
     return m
 
