@@ -23,6 +23,6 @@ def decrypt(sk,c):
     print(c[1])
     print(c[0])
     print(sk)
-    m = (c[1]/pow(c[0],sk)) % p
+    m = (pow(c[0],-sk,p)*c[1]) % p
     return m
 
